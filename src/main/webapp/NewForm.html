@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Registration From</title>
+<link rel="stylesheet" href="New.css">
+<script type="text/javascript" src="validation.js"></script>
+</head>
+<body>
+<div class="main">
+<div class="register">
+<h2>Student Registration Form</h2>
+<form action="NewLogin" id="register" method="post" onsubmit="return validationForm()">
+<label>Student Id </label>
+<br>
+<input type="text" name="sid" id="name" placeholder="Enter the ID">
+<br><br>
+<label>Name </label>
+<br>
+<input type="text" name="name" id="name" placeholder="Enter the Name">
+<br><br>
+<label>Email</label>
+<br>
+<input type="email" name="email" id="name" placeholder="Enter the email" required>
+<br><br>
+<label>Password</label>
+<br>
+<input type="password" name="password" id="name" placeholder="Enter the password" required>
+<br><br>
+<label>Mobile no </label>
+<br>
+<input type="number" name="mobile" id="name" placeholder="Enter Your Mobile Number">
+<br><br>
+<label>Address </label>
+<br>
+<input type="text" name="add" id="name" placeholder="Enter Your Address">
+<br><br>
+<input type="submit" value="save" name="submit" id="submit">
+</form>
+</div>
+</div>
+<script type="text/javascript">
+function validationForm(){
+	const name=document.getElementById('name').value;
+	if(validateName(name)){
+		alert('Please enter a valid name');
+		return false;
+	}
+	else{
+	  return true;
+	}
+}
+</script>
+</body>
+</html>

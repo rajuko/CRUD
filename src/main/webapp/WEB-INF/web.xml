@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+	
+  <servlet>
+  <servlet-name>New</servlet-name>
+  <servlet-class>com.ganesha.NewLogin</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>New</servlet-name>
+  <url-pattern>/NewLogin</url-pattern>
+  </servlet-mapping>
+	
+  <servlet>
+  <servlet-name>login</servlet-name>
+  <servlet-class>com.ganesha.Login</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>login</servlet-name>
+  <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>home1</servlet-name>
+  <servlet-class>com.ganesha.Home</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>home1</servlet-name>
+  <url-pattern>/Home</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>update</servlet-name>
+  <servlet-class>com.ganesha.Updateds</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>update</servlet-name>
+  <url-pattern>/Updateds</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>delete</servlet-name>
+  <servlet-class>com.ganesha.Delete</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>delete</servlet-name>
+  <url-pattern>/Delete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>delete1</servlet-name>
+  <servlet-class>com.ganesha.Delete1</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>delet1e</servlet-name>
+  <url-pattern>/Delete1</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+  <servlet-name>test</servlet-name>
+  <servlet-class>com.ganesha.Test</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>test</servlet-name>
+  <url-pattern>/Test</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
+</element>
+
+

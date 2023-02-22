@@ -1,0 +1,12 @@
+@charset "ISO-8859-1";
+h2{
+position:relative;
+font-family:sens-serif;
+text-transform:uppercase;
+font-size:2em;
+letter-spacing:4px;
+overflow:hidden;
+background-repeat:no-repeat;
+background-size:80%;
+text-align:center;
+}
