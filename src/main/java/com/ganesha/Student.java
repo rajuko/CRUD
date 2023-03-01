@@ -58,7 +58,8 @@ public class Student extends HttpServlet {
 			}
 		}
 		catch(Exception e) {
-			out.println("error..");
+			e.printStackTrace();
+			out.println(e.getMessage());
 			
 		}
 	

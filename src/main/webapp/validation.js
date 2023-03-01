@@ -1,5 +1,5 @@
 function validateName(name){
-	const regex=/^[a-zA-Z\s]+$/;
+	const regex=/^[0-9]{10}$/;
 	if(name.trim() === ' '){
 		return false;
 	}

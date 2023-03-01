@@ -39,13 +39,33 @@ public class Updateds extends HttpServlet {
 		    pst.setString(3, add);
 		    pst.setString(4, sid);
 		    
+		    			
 		    int i=pst.executeUpdate();
 		    
+		    out.print("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">"
+					+ "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\r\n"
+					+ " \r\n"
+					+ "<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>");
+			out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\r\n"
+					+ "  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>\r\n"
+					+ "  <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>");
+			out.println("<br><br>");
+			
+			out.println("<div class='alert alert-success' role='alert'>"
+					+ " <h6 align='center'> Record updated successfully...!</h6>"
+					+ "</div>");
+		
+			
 		    RequestDispatcher rd=request.getRequestDispatcher("Home");
 			rd.forward(request, response);
 		}
-		catch(Exception e) {
-			out.println("okk");
+		catch(ClassNotFoundException e) {
+			e.printStackTrace();
+			out.println(e.getMessage());
+		}
+		catch(Exception e1) {
+			e1.printStackTrace();
+			out.println(e1.getMessage());
 		}
 	}
 

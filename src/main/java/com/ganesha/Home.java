@@ -40,6 +40,11 @@ public class Home extends HttpServlet {
 		    rs1=st.executeQuery(query1);
 	   	   
 			out.println("<html>");
+			out.println("<head>");
+			out.println("<style>");
+			out.println("a{decoration:none;}");
+			out.println("</style>");
+			out.println("</head>");
 			out.println("<body>");
 			out.print("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">"
 					+ "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\r\n"
@@ -50,13 +55,13 @@ public class Home extends HttpServlet {
 					+ "  <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>");
 			out.println("<br><br>");
 			out.println("<link rel='stylesheet' href='style.css'>");
-			out.println("<h2 class='text-primary'>CURD OPERATIONS</h2>");
+			out.println("<h2 class='text-primary'>CRUD OPERATIONS</h2>");
 			out.println("<div class'jumbotron text-center'>");
 			out.println("<a href='NewForm.html' class='btn btn-success'>Add Student</a>");
 			out.println("<a href='Login.html' class='btn btn-success'>Logot</a>");
 			out.println("<br><br><br><br>");
 			out.println("<table border='1' width='500px' class='table table-hover table-striped'>");
-			out.println("<tr>");
+			out.println("<tr align='center' class='text-primary'>");
 			out.println("<td>StudentId</td>");
 			out.println("<td>Name</td>");
 			out.println("<td>Mobile</td>");
@@ -65,7 +70,7 @@ public class Home extends HttpServlet {
 			out.println("<td>Delete</td>");
 			out.println("</tr>");
 			while(rs1.next()) {
-				out.println("<tr>");
+				out.println("<tr align='center'>");
 				out.println("<td>" + rs1.getString(1) + "</td>");
 				out.println("<td>" + rs1.getString(2) + "</td>");
 				out.println("<td>" + rs1.getString(3) + "</td>");
@@ -81,9 +86,13 @@ public class Home extends HttpServlet {
 			    out.println("</html>");
 			
 		}
-		catch(Exception e) {
+		catch(ClassNotFoundException e) {
 			e.printStackTrace();
 			out.println(e.getMessage());
+		}
+		catch(Exception e1) {
+			e1.printStackTrace();
+			out.println(e1.getMessage());
 			
 		}
 	}

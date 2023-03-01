@@ -53,13 +53,19 @@ public class Login extends HttpServlet {
 			}
 			else {
 				out.println("<script>");
-				out.println("alert('please enter the correct email')");
+				out.println("alert('please enter the correct email and password...')");
 				out.println("</script>");
 			}
 	     }
-		catch(Exception e)
+		catch(ClassNotFoundException e) {
+			e.printStackTrace();
+			out.println(e.getMessage());
+		}
+		
+		catch(Exception e1)
 		{
-			out.println("Sorry");
+			e1.printStackTrace();
+			out.println(e1.getMessage());
 		}
 	}
 

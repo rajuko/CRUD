@@ -13,11 +13,11 @@
 <form action="NewLogin" id="register" method="post" onsubmit="return validationForm()">
 <label>Student Id </label>
 <br>
-<input type="text" name="sid" id="name" placeholder="Enter the ID">
+<input type="text" name="sid" id="name" placeholder="Enter the ID" required>
 <br><br>
 <label>Name </label>
 <br>
-<input type="text" name="name" id="name" placeholder="Enter the Name">
+<input type="text" name="name" id="name" placeholder="Enter the Name" required>
 <br><br>
 <label>Email</label>
 <br>
@@ -29,11 +29,11 @@
 <br><br>
 <label>Mobile no </label>
 <br>
-<input type="number" name="mobile" id="name" placeholder="Enter Your Mobile Number">
+<input type="number" name="mobile" id="name" id="phone" placeholder="Enter Your Mobile Number" required>
 <br><br>
 <label>Address </label>
 <br>
-<input type="text" name="add" id="name" placeholder="Enter Your Address">
+<input type="text" name="add" id="name" placeholder="Enter Your Address" required>
 <br><br>
 <input type="submit" value="save" name="submit" id="submit">
 </form>
@@ -41,8 +41,8 @@
 </div>
 <script type="text/javascript">
 function validationForm(){
-	const name=document.getElementById('name').value;
-	if(validateName(name)){
+	const mobile=document.getElementById('phone').value;
+	if(!validateName(mobile)){
 		alert('Please enter a valid name');
 		return false;
 	}

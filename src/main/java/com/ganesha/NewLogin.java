@@ -44,9 +44,15 @@ public class NewLogin extends HttpServlet {
 		    RequestDispatcher rd=request.getRequestDispatcher("Test");
 			rd.forward(request, response);
 		}
-		catch(Exception e) {
+		
+		catch(ClassNotFoundException e) {
 			e.printStackTrace();
-			out.print(e);
+			out.println(e.getMessage());
+		}
+		
+		catch(Exception e1) {
+			e1.printStackTrace();
+			out.print(e1.getMessage());
 			
 		}
 	}
